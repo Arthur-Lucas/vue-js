@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import VueTextEditor from './components/TextEditor.vue'
 
 const helloWorld: String = 'Hello World'
 
@@ -6,6 +7,7 @@ const helloWorld: String = 'Hello World'
 
 <template>
   <h1>{{ helloWorld }}</h1>
+  <VueTextEditor></VueTextEditor>
 </template>
 
 <style lang="scss">
