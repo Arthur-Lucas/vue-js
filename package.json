@@ -8,6 +8,8 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@volar/pug-language-service": "^0.33.1",
+    "@volar/typescript-language-service": "^0.33.1",
     "vue": "^3.2.31"
   },
   "devDependencies": {
