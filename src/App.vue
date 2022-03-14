@@ -1,3 +1,14 @@
 <script setup lang="ts">
-console.log('hello World')
+
+const helloWorld: String = 'Hello World'
+
 </script>
+
+<template>
+  <h1>{{ helloWorld }}</h1>
+</template>
+
+<style lang="scss">
+
+
+</style>
