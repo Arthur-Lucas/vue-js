@@ -55,9 +55,13 @@ console.log(formatted.value);
 
 <template>
   <span>QCM components</span>
-  <section class>
+  <section>
     <form v-for="question in formatted" :key="question.id">
       <span>{{ question.questionText }}</span>
+      <label v-for="answer in question.Answers" :key="answer.isValid">
+        <span>{{ answer.AnswerText }}</span>
+        <input type="checkbox" />
+      </label>
     </form>
   </section>
 </template>
