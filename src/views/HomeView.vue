@@ -91,7 +91,7 @@ export default {
 <style lang="scss">
   *{
     font-family: 'poppins';
-    background-color: #282A36;
+    
     color: white;
   }
   h2{
@@ -100,12 +100,14 @@ export default {
   .body{
     display: flex;
     align-items: flex-start;
+    background-color: #282A36;
     padding: 100px 50px;
     gap: 50px;
   }
   mark{
     font-weight: 700;
     color: greenyellow;
+    background-color: #282A36;
   }
   img{
       width: 400px;
@@ -121,6 +123,7 @@ export default {
       height: 30px;
       border: none;
       font-size: 30px;
+      background-color: #282A36;
     }
   }
 
@@ -139,5 +142,11 @@ export default {
       &:disabled {
         opacity: 0.5;
       }
+  }
+  .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
   }
 </style>

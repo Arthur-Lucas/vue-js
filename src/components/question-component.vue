@@ -93,9 +93,13 @@ const NextQuestion = () => {
   </main>
 </template>
 <style lang="scss" scoped>
+main{
+  background-color: #282A36;
+  height: 1200px;
+}
 .qcm-wrapper {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +120,7 @@ const NextQuestion = () => {
         font-size: 1.25rem;
       }
       .score {
-        color: #fff;
+        color:#282A36;
         font-size: 1.25rem;
       }
     }

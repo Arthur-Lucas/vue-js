@@ -24,7 +24,7 @@ console.log("navabar loaded");
 <style lang="scss" scoped>
 .header-wrapper {
   width: 100%;
-  height: 5rem;
+  height: 15vh;
   background-color: rgb(77, 26, 218);
   display: flex;
   align-items: center;
