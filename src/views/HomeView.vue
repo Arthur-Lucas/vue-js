@@ -6,7 +6,7 @@ Et earum eius a nisi quas ut tenetur tempora. Ut atque expedita et laboriosam co
 
 A expedita veritatis id omnis natus non voluptates commodi nam autem molestiae qui harum sint qui adipisci maxime hic nemo facilis. Ea quia deserunt quo quia debitis ad labore nesciunt.</p>
     </div>
-    <div class="carousel-form">
+    <div class="carousel-form button">
         <form @submit.prevent="display">
             <button type="submit">Testez vos connaissances</button>
         </form>
