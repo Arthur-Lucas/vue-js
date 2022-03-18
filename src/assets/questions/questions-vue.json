@@ -1,23 +1,92 @@
 [
     {
-      "question": "What is Vue?",
+      "question": "Vuejs, c'est Quoi?",
       "answer": 0,
-      "options": ["A framework", "A library", "A type of hat"],
-      "selected": null
-    },
-    {
-      "question": "What is Vuex used for?",
-      "answer": 2,
-      "options": ["Eating a delicious snack", "Viewing things", "State management"],
-      "selected": null
-    },
-    {
-      "question": "What is Vue Router?",
-      "answer": 1,
       "options": [
-        "An ice cream maker",
-        "A routing library for Vue",
-        "Burger sauce"
+        "Un Framework Javascript",
+        "Une Librairies Javascript"
+      ],
+      "selected": null
+    },
+    {
+      "question": "Quelle est la particularités de VueJS ?",
+      "answer": 3,
+      "options": [
+        "Utilisation du Virtual DOM", 
+        "Open-Source", 
+        "State management",
+        "Implémentations"
+      ],
+      "selected": null
+    },
+    {
+      "question": "Comment Créer un projet VueJS ?",
+      "answer": 3,
+      "options": [
+        "npx create-next-app",
+        "npm init vite@latest",
+        "vue create my-app",
+        "npm init vue@latest"
+      ],
+      "selected": null
+    },
+    {
+      "question": "C'est Quoi un SFC ?",
+      "answer": 0,
+      "options": [
+        "Fichier en *.vue qui contient toutes la logique des components",
+        "Une contrefaçon de KFC",
+        "un Syndicat",
+        "un Club de ligue 2"
+      ],
+      "selected": null
+    },
+    {
+      "question": "à Quoi sert <script setup>",
+      "answer": 2,
+      "options": [
+        "Utiliser TypeScript",
+        "Setup le script",
+        "[ insérez bonne réponse ]"
+      ],
+      "selected": null
+    },
+    {
+      "question": "Laquelle de ces réponses utilise un lifecycle hook ?",
+      "answer": 0,
+      "options": [
+        "onMounted(() => {console.log('hello world')})",
+        "onMounted({console.log('heelo world')})",
+        "onMounted.render({console.log('hello world})"
+      ],
+      "selected": null
+    },
+    {
+      "question": "La différence entre ref() et reactive() ?",
+      "answer": 0,
+      "options": [
+        "ref() => valeurs Primitives, reactive() => Objets",
+        "[ insérez bonne réponse ]",
+        "ref() => changement de valeurs, reactive() => changement d'états"
+      ],
+      "selected": null
+    },
+    {
+      "question": "comment utiliser scss avec VueJS ?",
+      "answer": 0,
+      "options": [
+        "<script lang='scss'>",
+        "npm i sass",
+        "import { sass } from 'sass'"
+      ],
+      "selected": null
+    },
+    {
+      "question": "à Quoi sert Vuex ?",
+      "answer": 0,
+      "options": [
+        "Transmettre des états d'un components à l'autre",
+        "Transmettre des valeurs d'un état à l'autre"
       ],
       "selected": null
     }
