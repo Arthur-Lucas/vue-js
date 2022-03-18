@@ -13,6 +13,9 @@ console.log("navabar loaded");
         <RouterLink to="/" class="navbar-list-item carousel-form">
           <li>Home</li>
         </RouterLink>
+        <RouterLink to="/chrono" class="navbar-list-item carousel-form">
+          <li>Chrono doc</li>
+        </RouterLink>
         <RouterLink to="/skilltest" class="navbar-list-item">
           <li>Get Quizz'ed</li>
         </RouterLink>

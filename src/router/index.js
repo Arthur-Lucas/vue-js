@@ -15,9 +15,9 @@ const router = createRouter({
       component: () => import("../views/SkillTestView.vue"),
     },
     {
-      path: "/docs",
-      name: "rtfm",
-      component: () => import("../views/DocsView.vue"),
+      path: "/chrono",
+      name: "chrono",
+      component: () => import("../views/ChronoView.vue"),
     },
   ],
 });
