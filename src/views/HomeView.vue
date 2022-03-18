@@ -103,6 +103,7 @@ export default {
     background-color: #282A36;
     padding: 100px 50px;
     gap: 50px;
+    
   }
   mark{
     font-weight: 700;

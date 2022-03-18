@@ -11,7 +11,7 @@ console.log("navabar loaded");
     <nav class="navbar-wrapper">
       <ul class="navbar-list">
         <RouterLink to="/" class="navbar-list-item carousel-form">
-          <li>Home</li>
+          <li>Carousel doc</li>
         </RouterLink>
         <RouterLink to="/chrono" class="navbar-list-item carousel-form">
           <li>Chrono doc</li>
