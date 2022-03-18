@@ -1,11 +1,52 @@
 <script setup>
 import { RouterLink } from "vue-router";
+console.log("navabar loaded");
 </script>
 
 <template>
-  <h1>LOURDE NAVBAR</h1>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/skilltest">Skill-Test</RouterLink>
-  </nav>
+  <header class="header-wrapper">
+    <div class="logo-wrapper">
+      <h1>VueQuizz</h1>
+    </div>
+    <nav class="navbar-wrapper">
+      <ul class="navbar-list">
+        <RouterLink to="/" class="navbar-list-item carousel-form">
+          <li>Home</li>
+        </RouterLink>
+        <RouterLink to="/skilltest" class="navbar-list-item">
+          <li>Get Quizz'ed</li>
+        </RouterLink>
+      </ul>
+    </nav>
+  </header>
 </template>
+
+<style lang="scss" scoped>
+.header-wrapper {
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(77, 26, 218);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .logo-wrapper {
+    text-transform: uppercase;
+    h1 {
+      color: whitesmoke;
+      font-size: 2rem;
+    }
+  }
+  .navbar-wrapper {
+    .navbar-list {
+      list-style: none;
+      display: flex;
+      .navbar-list-item {
+        color: whitesmoke;
+        text-decoration: none;
+        margin: 0 2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+</style>
