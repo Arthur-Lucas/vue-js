@@ -1,68 +1,112 @@
 <script setup>
-import { ref } from "vue";
-
-const questions = [
+import { computed, ref } from "vue";
+const questions = ref([
   {
-    id: "0",
-    questionText: "This is a Question,1",
-    Answers: [
-      {
-        isValid: true,
-        AnswerText: "asnswer 1",
-      },
-      {
-        isValid: false,
-        AnswerText: "asnswer 2",
-      },
-      {
-        isValid: false,
-        AnswerText: "asnswer 3",
-      },
-      {
-        isValid: false,
-        AnswerText: "asnswer 4",
-      },
-    ],
+    question: "What is Vue?",
+    answer: 0,
+    options: ["A framework", "A library", "A type of hat"],
+    selected: null,
   },
   {
-    id: "1",
-    questionText: "This is a Question 2",
-    Answers: [
-      {
-        isValid: false,
-        AnswerText: "asnswer 1",
-      },
-      {
-        isValid: false,
-        AnswerText: "asnswer 2",
-      },
-      {
-        isValid: true,
-        AnswerText: "asnswer 3",
-      },
-      {
-        isValid: false,
-        AnswerText: "asnswer 4",
-      },
-    ],
+    question: "What is Vuex used for?",
+    answer: 2,
+    options: ["Eating a delicious snack", "Viewing things", "State management"],
+    selected: null,
   },
-];
+  {
+    question: "What is Vue Router?",
+    answer: 1,
+    options: [
+      "An ice cream maker",
+      "A routing library for Vue",
+      "Burger sauce",
+    ],
+    selected: null,
+  },
+]);
+const quizCompleted = ref(false);
+const currentQuestion = ref(0);
+const score = computed(() => {
+  let value = 0;
+  questions.value.map((q) => {
+    if (q.selected != null && q.answer == q.selected) {
+      console.log("correct");
+      value++;
+    }
+  });
+  return value;
+});
+const getCurrentQuestion = computed(() => {
+  let question = questions.value[currentQuestion.value];
+  question.index = currentQuestion.value;
+  return question;
+});
+const SetAnswer = (e) => {
+  questions.value[currentQuestion.value].selected = e.target.value;
+  e.target.value = null;
+};
+const NextQuestion = () => {
+  if (currentQuestion.value < questions.value.length - 1) {
+    currentQuestion.value++;
+    return;
+  }
 
-const formatted = ref(questions);
-
-console.log(formatted.value);
+  quizCompleted.value = true;
+};
 </script>
 
 <template>
-  <span>QCM components</span>
-  <section>
-    <form v-for="question in formatted" :key="question.id">
-      <span>{{ question.questionText }}</span>
-      <label v-for="answer in question.Answers" :key="answer.isValid">
-        <span>{{ answer.AnswerText }}</span>
-        <input type="checkbox" />
+  <section class="quiz" v-if="!quizCompleted">
+    <div class="quiz-info">
+      <span class="question">{{ getCurrentQuestion.question }}</span>
+      <span class="score">Score {{ score }}/{{ questions.length }}</span>
+    </div>
+
+    <div class="options">
+      <label
+        :key="index"
+        v-for="(option, index) in getCurrentQuestion.options"
+        :for="'option' + index"
+        :class="`option ${
+          getCurrentQuestion.selected == index
+            ? index == getCurrentQuestion.answer
+              ? 'correct'
+              : 'wrong'
+            : ''
+        } ${
+          getCurrentQuestion.selected != null &&
+          index != getCurrentQuestion.selected
+            ? 'disabled'
+            : ''
+        }`"
+      >
+        <input
+          type="radio"
+          :id="'option' + index"
+          :name="getCurrentQuestion.index"
+          :value="index"
+          v-model="getCurrentQuestion.selected"
+          :disabled="getCurrentQuestion.selected"
+          @change="SetAnswer"
+        />
+        <span>{{ option }}</span>
       </label>
-    </form>
+    </div>
+
+    <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
+      {{
+        getCurrentQuestion.index == questions.length - 1
+          ? "Finish"
+          : getCurrentQuestion.selected == null
+          ? "Select an option"
+          : "Next question"
+      }}
+    </button>
+  </section>
+
+  <section v-else>
+    <h2>You have finished the quiz!</h2>
+    <p>Your score is {{ score }}/{{ questions.length }}</p>
   </section>
 </template>
 
