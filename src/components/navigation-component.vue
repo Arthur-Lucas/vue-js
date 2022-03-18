@@ -10,14 +10,11 @@ console.log("navabar loaded");
     </div>
     <nav class="navbar-wrapper">
       <ul class="navbar-list">
-        <RouterLink to="/" class="navbar-list-item">
+        <RouterLink to="/" class="navbar-list-item carousel-form">
           <li>Home</li>
         </RouterLink>
         <RouterLink to="/skilltest" class="navbar-list-item">
           <li>Get Quizz'ed</li>
-        </RouterLink>
-        <RouterLink to="/docs" class="navbar-list-item">
-          <li>RTFM</li>
         </RouterLink>
       </ul>
     </nav>

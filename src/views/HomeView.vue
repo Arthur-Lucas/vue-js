@@ -11,9 +11,6 @@ A expedita veritatis id omnis natus non voluptates commodi nam autem molestiae q
             <button type="submit">Testez vos connaissances</button>
         </form>
     </div>
-    <div :style="dn">
-      <p>QCM</p>
-    </div>
 
 
 </template>
@@ -21,9 +18,7 @@ A expedita veritatis id omnis natus non voluptates commodi nam autem molestiae q
 <script>
 export default {
    data(){
-     return{
-       dn: 'display:none'
-     }
+     
    },
    methods:{
      display: function(){
@@ -32,7 +27,7 @@ export default {
         array.forEach(element => {
             element.parentNode.removeChild(element)
         });
-        this.dn = 'display:block';
+        this.$router.push('/skilltest')
      }
    }
 }
