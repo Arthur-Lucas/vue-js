@@ -1,29 +1,8 @@
 <script setup>
 import { computed, ref } from "vue";
-const questions = ref([
-  {
-    question: "What is Vue?",
-    answer: 0,
-    options: ["A framework", "A library", "A type of hat"],
-    selected: null,
-  },
-  {
-    question: "What is Vuex used for?",
-    answer: 2,
-    options: ["Eating a delicious snack", "Viewing things", "State management"],
-    selected: null,
-  },
-  {
-    question: "What is Vue Router?",
-    answer: 1,
-    options: [
-      "An ice cream maker",
-      "A routing library for Vue",
-      "Burger sauce",
-    ],
-    selected: null,
-  },
-]);
+import VueQuestion from "../assets/questions/questions-vue.json";
+
+const questions = ref(VueQuestion);
 const quizCompleted = ref(false);
 const currentQuestion = ref(0);
 const score = computed(() => {
@@ -110,4 +89,94 @@ const NextQuestion = () => {
   </section>
 </template>
 
-<style></style>
+<style>
+body {
+  background-color: #271c36;
+  color: #fff;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.quiz {
+  background-color: #382a4b;
+  padding: 1rem;
+  width: 100%;
+  max-width: 640px;
+}
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.quiz-info .question {
+  color: #8f8f8f;
+  font-size: 1.25rem;
+}
+.quiz-info.score {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.options {
+  margin-bottom: 1rem;
+}
+.option {
+  padding: 1rem;
+  display: block;
+  background-color: #271c36;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: #2d213f;
+}
+.option.correct {
+  background-color: #2cce7d;
+}
+.option.wrong {
+  background-color: #ff5a5f;
+}
+.option:last-of-type {
+  margin-bottom: 0;
+}
+.option.disabled {
+  opacity: 0.5;
+}
+.option input {
+  display: none;
+}
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #2cce7d;
+  color: #2d213f;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+}
+button:disabled {
+  opacity: 0.5;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+p {
+  color: #8f8f8f;
+  font-size: 1.5rem;
+  text-align: center;
+}
+</style>
