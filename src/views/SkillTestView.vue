@@ -1,5 +1,5 @@
 <script setup>
-import QuestionWrapper from "../components/question-wrapper.vue";
+import QuestionWrapper from "../components/question-component.vue";
 </script>
 
 <template>

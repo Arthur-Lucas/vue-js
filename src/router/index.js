@@ -14,6 +14,11 @@ const router = createRouter({
       name: "skill-test",
       component: () => import("../views/SkillTestView.vue"),
     },
+    {
+      path: "/docs",
+      name: "rtfm",
+      component: () => import("../views/DocsView.vue"),
+    },
   ],
 });
 
