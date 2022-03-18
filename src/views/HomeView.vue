@@ -116,6 +116,7 @@ export default {
   .slider{
     display: flex;
     align-items: center;
+    gap: 10px;
     img{
       height: 250px;
     }
@@ -124,6 +125,7 @@ export default {
       border: none;
       font-size: 30px;
       background-color: #282A36;
+      cursor: pointer;
     }
   }
 
@@ -148,5 +150,6 @@ export default {
     display: flex;
     justify-content: center;
     padding: 40px;
+    cursor: pointer;
   }
 </style>
